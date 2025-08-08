@@ -23,6 +23,24 @@
                 "uriFormat": "%s",
                 "action": "debugWithChrome"
             }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Next.js: debug dev server",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "env": {
+                "NODE_OPTIONS": "--inspect-brk"
+            },
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
         }
     ]
 }
